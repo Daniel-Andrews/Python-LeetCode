@@ -15,3 +15,10 @@
 # S and J will consist of letters and have length at most 50.
 # The characters in J are distinct.
 
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        counter = 0;
+        for i in J:
+            if i in S:
+                counter += S.count(i);
+        return counter;
